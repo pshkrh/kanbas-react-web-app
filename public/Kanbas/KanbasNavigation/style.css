@@ -1,0 +1,59 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.kanbas-nav {
+    background-color: black;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding-inline-start: 0;
+    padding-left: 0;
+    width: 85px;
+}
+
+.kanbas-nav li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.kanbas-nav li>i {
+    color: red;
+}
+
+.kanbas-nav li>a {
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.account-icon {
+    color: white !important;
+}
+
+.nu-logo {
+    width: 80px;
+}
+
+.kanbas-nav-selected {
+    background-color: white;
+}
+
+.kanbas-nav-selected>i {
+    color: grey !important;
+}
+
+.kanbas-nav-selected>a {
+    color: red !important;
+}
+
+.kb-nav-icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
