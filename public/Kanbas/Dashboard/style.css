@@ -1,0 +1,25 @@
+.dash-card {
+    width: 250px;
+}
+
+.dash-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.card-dropdown {
+    background: transparent;
+    border: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+    content: none;
+}
