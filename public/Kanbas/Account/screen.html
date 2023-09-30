@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="/Kanbas/KanbasNavigation/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!--Kanbas Navigation-->
-    <ul>
-        <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
+    <ul class="kanbas-nav">
+        <li>
+            <img src="/images/nu_logo.png" alt="NU Logo" class="nu-logo">
+        </li>
+        <li class="kanbas-nav-selected">
+            <i class="kb-nav-icon fa-solid fa-circle-user fa-2xl account-icon"></i> <br>
+            <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon nav-icon fa-solid fa-gauge-high fa-flip-horizontal fa-2xl"></i> <br>
+            <a href="#">Dashboard</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-solid fa-book fa-2xl"></i> <br>
+            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-solid fa-calendar-days fa-2xl"></i> <br>
+            <a href="#">Calendar</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-solid fa-envelope-open-text fa-2xl"></i> <br>
+            <a href="#">Inbox</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-regular fa-clock fa-2xl"></i> <br>
+            <a href="#">History</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-solid fa-circle-play fa-2xl"></i> <br>
+            <a href="#">Studio</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-solid fa-right-from-bracket fa-2xl"></i> <br>
+            <a href="#">Commons</a>
+        </li>
+        <li>
+            <i class="kb-nav-icon fa-regular fa-circle-question fa-2xl"></i> <br>
+            <a href="#">Help</a>
+        </li>
     </ul>
 </body>
+
 </html>
