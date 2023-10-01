@@ -1,0 +1,29 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.link {
+    color: red;
+    text-decoration: none;
+}
+
+.module-title {
+    font-weight: bold;
+}
+
+.module-subtitle {
+    font-weight: bold;
+}
+
+.module-item {
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+.module-link {
+    padding-left: 20px;
+}
+
+.todo-item {
+    color: red;
+}
