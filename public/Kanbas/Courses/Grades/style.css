@@ -1,0 +1,13 @@
+.link {
+    color: red;
+    text-decoration: none;
+}
+
+.menu-icon {
+    color: red;
+}
+
+.course-name,
+.page-name {
+    font-size: large;
+}
