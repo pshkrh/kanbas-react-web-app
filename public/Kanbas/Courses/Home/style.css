@@ -31,3 +31,12 @@ body {
 .list-group-item.module-border {
     border-left: 5px solid green;
 }
+
+.menu-icon {
+    color: red;
+}
+
+.course-name,
+.page-name {
+    font-size: large;
+}
