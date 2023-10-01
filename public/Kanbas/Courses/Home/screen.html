@@ -28,7 +28,7 @@
                     <li>
                         <img src="/images/nu_logo.png" alt="NU Logo" class="nu-logo">
                     </li>
-                    <li class="kanbas-nav-selected">
+                    <li>
                         <i class="kb-nav-icon fa-solid fa-circle-user fa-2xl account-icon"></i> <br>
                         <a href="/Kanbas/Account/Profile/screen.html">Account</a>
                     </li>
@@ -36,7 +36,7 @@
                         <i class="kb-nav-icon nav-icon fa-solid fa-gauge-high fa-flip-horizontal fa-2xl"></i> <br>
                         <a href="#">Dashboard</a>
                     </li>
-                    <li>
+                    <li class="kanbas-nav-selected">
                         <i class="kb-nav-icon fa-solid fa-book fa-2xl"></i> <br>
                         <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
                     </li>
@@ -70,14 +70,22 @@
             <div class="col-11">
                 <div class="row">
                     <!-- top bar -->
-                    <div class="home-top-bar">
-                        <i class="fa-solid fa-bars menu-icon float-start me-3"></i>
-                        <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a class="link" href="#">CS5610.11550.202410</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Home</li>
-                            </ol>
-                        </nav>
+                    <div class="d-flex flex-row align-items-center p-2">
+                        <i class="fa-solid fa-bars menu-icon fa-lg p-2"></i>
+                        <div class="p-2">
+                            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a class="link" href="#"><span
+                                                class="course-name">CS5610.11550.202410</span></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><span
+                                            class="page-name">Assignments</span></li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="ms-auto">
+                            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-glasses"></i>
+                                Student View</button>
+                        </div>
                     </div>
                     <hr>
                 </div>
