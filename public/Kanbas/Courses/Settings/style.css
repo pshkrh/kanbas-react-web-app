@@ -1,0 +1,22 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.link {
+    color: red;
+    text-decoration: none;
+}
+
+.menu-icon {
+    color: red;
+}
+
+.course-name,
+.page-name {
+    font-size: large;
+}
+
+.nav-link.link {
+    color: red;
+    text-decoration: none;
+}
