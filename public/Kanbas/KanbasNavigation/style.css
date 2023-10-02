@@ -10,6 +10,8 @@ body {
     padding-inline-start: 0;
     padding-left: 0;
     width: 85px;
+    margin: 0;
+    height: 100%;
 }
 
 .kanbas-nav li {
@@ -32,7 +34,7 @@ body {
 }
 
 .account-icon {
-    color: white !important;
+    color: lightgrey !important;
 }
 
 .nu-logo {
@@ -41,10 +43,6 @@ body {
 
 .kanbas-nav-selected {
     background-color: white;
-}
-
-.kanbas-nav-selected>i {
-    color: grey !important;
 }
 
 .kanbas-nav-selected>a {
