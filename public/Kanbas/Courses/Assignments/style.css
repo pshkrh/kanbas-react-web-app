@@ -40,3 +40,7 @@ body {
 .check-icon {
     color: green;
 }
+
+.col-2.cnav {
+    padding-left: 25px;
+}

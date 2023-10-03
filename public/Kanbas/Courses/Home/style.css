@@ -40,3 +40,19 @@ body {
 .page-name {
     font-size: large;
 }
+
+.col.navcol {
+    flex: 0 0 85px;
+    max-width: 85px;
+    min-width: 85px;
+}
+
+.col-2.sidebar {
+    flex: 0 0 200px;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.col-2.cnav {
+    padding-left: 25px;
+}

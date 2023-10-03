@@ -20,3 +20,7 @@ body {
     color: red;
     text-decoration: none;
 }
+
+.col-2.cnav {
+    padding-left: 25px;
+}

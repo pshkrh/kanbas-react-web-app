@@ -20,49 +20,59 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container ms-0 pe-0">
         <div class="row">
-            <div class="col-1 p-0 m-0">
+            <div class="col-1 p-0 m-0 d-none d-lg-block">
                 <!-- Kanbas Navigation -->
                 <ul class="kanbas-nav min-vh-100">
                     <li>
-                        <img src="/images/nu_logo.png" alt="NU Logo" class="nu-logo">
+                        <img src="/images/nu_logo.png" href="#" alt="NU Logo" class="nu-logo">
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-solid fa-circle-user fa-2xl account-icon"></i> <br>
-                        <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+                        <a class="kanbas-nav-link" href="/Kanbas/Account/Profile/screen.html"><i
+                                class="kb-nav-icon fa-solid fa-circle-user fa-2xl account-icon"></i> <br> <span
+                                class="kanbas-nav-text">Account</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon nav-icon fa-solid fa-gauge-high fa-flip-horizontal fa-2xl"></i> <br>
-                        <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                        <a class="kanbas-nav-link" href="/Kanbas/Dashboard/screen.html"><i
+                                class="kb-nav-icon fa-solid fa-gauge-high fa-flip-horizontal fa-2xl"></i> <br>
+                            <span class="kanbas-nav-text">Dashboard</span></a>
                     </li>
                     <li class="kanbas-nav-selected">
-                        <i class="kb-nav-icon fa-solid fa-book fa-2xl"></i> <br>
-                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+
+                        <a class="kanbas-nav-link" href="/Kanbas/Courses/Home/screen.html"><i
+                                class="kb-nav-icon fa-solid fa-book fa-2xl"></i>
+                            <br><span class="kanbas-nav-text">Courses</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-solid fa-calendar-days fa-2xl"></i> <br>
-                        <a href="#">Calendar</a>
+
+                        <a class="kanbas-nav-link" href="#"><i class="kb-nav-icon fa-solid fa-calendar-days fa-2xl"></i>
+                            <br><span class="kanbas-nav-text">Calendar</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-solid fa-envelope-open-text fa-2xl"></i> <br>
-                        <a href="#">Inbox</a>
+
+                        <a class="kanbas-nav-link" href="#"><i
+                                class="kb-nav-icon fa-solid fa-envelope-open-text fa-2xl"></i> <br> <span
+                                class="kanbas-nav-text">Inbox</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-regular fa-clock fa-2xl"></i> <br>
-                        <a href="#">History</a>
+                        <a class="kanbas-nav-link" href="#"><i class="kb-nav-icon fa-regular fa-clock fa-2xl"></i> <br>
+                            <span class="kanbas-nav-text">History</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-solid fa-circle-play fa-2xl"></i> <br>
-                        <a href="#">Studio</a>
+
+                        <a class="kanbas-nav-link" href="#"><i class="kb-nav-icon fa-solid fa-circle-play fa-2xl"></i>
+                            <br> <span class="kanbas-nav-text">Studio</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-solid fa-right-from-bracket fa-2xl"></i> <br>
-                        <a href="#">Commons</a>
+                        <a class="kanbas-nav-link" href="#"><i
+                                class="kb-nav-icon fa-solid fa-right-from-bracket fa-2xl"></i> <br><span
+                                class="kanbas-nav-text">Commons</span></a>
                     </li>
                     <li>
-                        <i class="kb-nav-icon fa-regular fa-circle-question fa-2xl"></i> <br>
-                        <a href="#">Help</a>
+                        <a class="kanbas-nav-link" href="#"><i
+                                class="kb-nav-icon fa-regular fa-circle-question fa-2xl"></i> <br><span
+                                class="kanbas-nav-text">Help</span></a>
                     </li>
                 </ul>
             </div>
@@ -70,15 +80,16 @@
             <div class="col-11">
                 <div class="row">
                     <!-- top bar -->
-                    <div class="d-flex flex-row align-items-center p-2">
+                    <div class="d-flex flex-row align-items-center p-2 ms-2">
                         <i class="fa-solid fa-bars menu-icon fa-lg p-2"></i>
                         <div class="p-2">
                             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a class="link" href="#"><span
+                                    <li class="breadcrumb-item"><a class="link"
+                                            href="/Kanbas/Courses/Home/screen.html"><span
                                                 class="course-name">CS5610.11550.202410</span></a></li>
                                     <li class="breadcrumb-item active" aria-current="page"><span
-                                            class="page-name">Assignments</span></li>
+                                            class="page-name">Home</span></li>
                                 </ol>
                             </nav>
                         </div>
@@ -87,11 +98,11 @@
                                 Student View</button>
                         </div>
                     </div>
-                    <hr>
+                    <hr class="ms-3">
                 </div>
 
                 <div class="row">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-2 cnav m-0 d-none d-lg-block me-4">
                         <!-- Course Navigation -->
                         <ul class="course-nav">
                             <li class="course-nav-selected"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
@@ -114,36 +125,41 @@
                             <li><a href="#">Collaborations</a> <i
                                     class="fa-regular fa-eye-slash fa-flip-horizontal"></i></li>
                             <li><a href="#">Syllabus</a> <i class="fa-regular fa-eye-slash fa-flip-horizontal"></i></li>
-                            <li><a href="#">Progress Reports <br /> (EAB Navigate)</a></li>
+                            <li><a href="#">Progress Reports <br /> <span class="ps-2">(EAB Navigate)</span></a></li>
                             <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a></li>
                         </ul>
                     </div>
 
                     <!-- Modules -->
-                    <div class="col-8">
+                    <div class="col">
 
                         <!-- Module top buttons row -->
-                        <div class="d-flex justify-content-end gap-1">
-                            <button type="button" class="btn btn-secondary">Collapse All</button>
-                            <button type="button" class="btn btn-secondary">View Progress</button>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-regular fa-circle-check" style="color: lightgreen;"></i> Publish All
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Publish All</a></li>
-                                    <li><a class="dropdown-item" href="#">Publish all items and modules</a></li>
-                                    <li><a class="dropdown-item" href="#">Unpublish all</a></li>
-                                </ul>
+                        <div class="row">
+                            <div class="col d-flex justify-content-end mb-2 gap-1">
+                                <button type="button" class="btn btn-secondary">Collapse All</button>
+                                <button type="button" class="btn btn-secondary">View Progress</button>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-regular fa-circle-check" style="color: lightgreen;"></i> Publish
+                                        All
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Publish All</a></li>
+                                        <li><a class="dropdown-item" href="#">Publish all items and modules</a></li>
+                                        <li><a class="dropdown-item" href="#">Unpublish all</a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn btn-danger"><i class="fa-solid fa-plus"></i>
+                                    Module</button>
+                                <button type="button" class="btn btn-secondary"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></button>
                             </div>
-                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-plus"></i>
-                                Module</button>
-                            <button type="button" class="btn btn-secondary"><i
-                                    class="fa-solid fa-ellipsis-vertical"></i></button>
                         </div>
 
-                        <hr />
+                        <div class="row">
+                            <hr />
+                        </div>
                         <div class="row">
                             <!-- Modules content -->
 
@@ -409,16 +425,19 @@
                         </div>
                     </div>
 
-                    <div class="col-2">
+                    <div class="col-3 me-0 d-none d-xl-block"> <!--  -->
                         <!-- Course Status -->
-                        <h2>Course Status</h2>
+                        <h5>Course Status</h5>
 
-                        <button type="button" class="btn btn-secondary mb-3"><i class="fa-solid fa-ban"></i>
-                            Unpublish</button>
-                        <button type="button" class="btn btn-success mb-3" disabled><i
-                                class="fa-regular fa-circle-check" style="color: lightgreen;"></i> Published</button>
+                        <div class="d-flex mb-2 gap-1">
+                            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-ban"></i>
+                                Unpublish</button>
+                            <button type="button" class="btn btn-success" disabled><i class="fa-regular fa-circle-check"
+                                    style="color: lightgreen;"></i>
+                                Published</button>
 
-                        <br />
+                        </div>
+
 
                         <div class="d-flex flex-column">
                             <button class="btn btn-secondary mb-2 text-start"><i class="fa-solid fa-file-import"></i>
