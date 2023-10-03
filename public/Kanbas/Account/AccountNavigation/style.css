@@ -21,9 +21,15 @@ ul.account-nav li>a {
     text-decoration: none;
 }
 
+.account-nav-selected {
+    border-left: 2px solid black;
+}
+
 .account-nav-selected a {
     color: black !important;
-    border-left: 2px solid;
-    padding-left: 2px;
     font-weight: bold;
+}
+
+.account-nav li a {
+    margin-left: 10px;
 }
