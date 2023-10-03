@@ -21,9 +21,15 @@ ul.course-nav li>a {
     text-decoration: none;
 }
 
+.course-nav-selected {
+    border-left: 2px solid black;
+}
+
 .course-nav-selected a {
     color: black !important;
-    border-left: 2px solid;
-    padding-left: 2px;
     font-weight: bold;
+}
+
+.course-nav li a {
+    margin-left: 10px;
 }

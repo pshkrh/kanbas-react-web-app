@@ -20,11 +20,20 @@ body {
     width: 100%;
 }
 
-.kanbas-nav li>i {
-    color: red;
+.kanbas-nav-link {
+    text-decoration: none;
 }
 
-.kanbas-nav li>a {
+.kb-nav-icon {
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.kanbas-nav-text {
     color: white;
     text-decoration: none;
     padding-top: 10px;
@@ -45,13 +54,6 @@ body {
     background-color: white;
 }
 
-.kanbas-nav-selected>a {
+.kanbas-nav-selected>a>span {
     color: red !important;
-}
-
-.kb-nav-icon {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
