@@ -20,9 +20,9 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container ms-0 pe-0">
         <div class="row">
-            <div class="col-1 p-0 m-0">
+            <div class="col-1 p-0 m-0 d-none d-lg-block">
                 <!-- Kanbas Navigation -->
                 <ul class="kanbas-nav min-vh-100">
                     <li>
@@ -82,16 +82,19 @@
 
                 <div class="row">
                     <!-- topbar -->
-                    <div class="top-bar p-0 mt-2">
-                        <div class="h4"><i class="fa-solid fa-bars menu-icon"></i> Pushkar Kurhekar's Profile</div>
-                        <hr>
+                    <div class="d-flex flex-row align-middle align-items-center text-center p-2 pt-3 pb-3 ms-2">
+                        <div><i class="fa-solid fa-bars menu-icon fa-xl p-2 me-1"></i></div>
+                        <div>
+                            <h4 class="m-0">Pushkar Kurhekar's Profile</h4>
+                        </div>
                     </div>
+                    <hr class="ms-3">
                 </div>
 
                 <div class="row">
                     <!-- center -->
 
-                    <div class="col-2 p-0">
+                    <div class="col-2 anav m-0 d-none d-lg-block me-4">
                         <!--Account Navigation-->
                         <ul class="account-nav">
                             <li><a href="#">Notifications</a></li>
@@ -107,11 +110,11 @@
                         </ul>
                     </div>
 
-                    <div class="col-10">
+                    <div class="col">
                         <!-- edit profile -->
 
                         <div class="row">
-                            <div class="col-10">
+                            <div class="col-9">
                                 <!-- main edit -->
                                 <i class="fa-solid fa-circle-user avatar-icon"></i>
                                 <br />
@@ -176,22 +179,17 @@
 
                                 <hr />
 
-                                <div class="float-end">
-                                    <form action="/Kanbas/Account/Profile/screen.html" style="display:inline;">
-                                        <button class="btn btn-secondary">Cancel</button>
-                                    </form>
-                                    <form action="/Kanbas/Account/Profile/screen.html" style="display:inline;">
-                                        <button class="btn btn-danger">Save Profile</button>
-                                    </form>
+                                <div class="float-end mb-3">
+                                    <a href="/Kanbas/Account/Profile/screen.html" class="btn btn-secondary">Cancel</a>
+                                    <a href="/Kanbas/Account/Profile/screen.html" class="btn btn-danger">Save
+                                        Profile</a>
                                 </div>
                             </div>
 
-                            <div class="col-2">
+                            <div class="col-3">
                                 <!-- edit button -->
-                                <form action="/Kanbas/Account/Profile/screen.html" style="display:inline;">
-                                    <button type="submit" class="btn btn-secondary"><i
-                                            class="fa-solid fa-pencil fa-flip-horizontal"></i> Cancel Editing</button>
-                                </form>
+                                <a href="/Kanbas/Account/Profile/screen.html" class="btn btn-secondary"><i
+                                        class="fa-solid fa-pencil fa-flip-horizontal"></i> Cancel Editing</a>
                             </div>
                         </div>
                     </div>
