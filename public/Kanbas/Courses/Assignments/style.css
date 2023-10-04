@@ -48,3 +48,8 @@ body {
 .list-group.square-list-group {
     border-radius: 0;
 }
+
+.assign-add-btn {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
