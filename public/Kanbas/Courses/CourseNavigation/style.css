@@ -46,3 +46,7 @@ ul.course-nav li>a {
 .course-link {
     color: grey;
 }
+
+.course-item-hidden-icon {
+    color: black;
+}
