@@ -43,7 +43,7 @@ body {
 }
 
 .account-icon {
-    color: lightgrey !important;
+    color: white !important;
 }
 
 .nu-logo {
@@ -52,6 +52,11 @@ body {
 
 .kanbas-nav-selected {
     background-color: white;
+}
+
+
+.kanbas-nav-selected>a>i.account-icon {
+    color: grey !important;
 }
 
 .kanbas-nav-selected>a>span {
