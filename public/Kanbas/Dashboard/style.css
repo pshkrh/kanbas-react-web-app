@@ -26,3 +26,12 @@
     display: none;
     content: none;
 }
+
+.text-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
