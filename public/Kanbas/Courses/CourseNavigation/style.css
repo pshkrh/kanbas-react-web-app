@@ -50,3 +50,9 @@ ul.course-nav li>a {
 .course-item-hidden-icon {
     color: black;
 }
+
+.cnav-small-text {
+    font-size: 0.7em;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
