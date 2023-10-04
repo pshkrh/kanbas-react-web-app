@@ -33,3 +33,16 @@ ul.course-nav li>a {
 .course-nav li a {
     margin-left: 10px;
 }
+
+.course-menu {
+    list-style-type: none;
+}
+
+.course-menu-text {
+    color: red;
+    text-decoration: none;
+}
+
+.course-link {
+    color: grey;
+}
