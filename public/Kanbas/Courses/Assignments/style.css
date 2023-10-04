@@ -44,3 +44,7 @@ body {
 .col-2.cnav {
     padding-left: 25px;
 }
+
+.list-group.square-list-group {
+    border-radius: 0;
+}
