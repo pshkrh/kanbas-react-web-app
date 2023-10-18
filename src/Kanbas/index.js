@@ -1,13 +1,11 @@
-import Assignment3 from "./a3";
 import Nav from "../Nav";
 
-function Labs() {
+function Kanbas() {
     return (
         <div className="container">
             <Nav />
-            <Assignment3 />
+            <h1>Kanbas</h1>
         </div>
-
     );
 }
-export default Labs;
+export default Kanbas
