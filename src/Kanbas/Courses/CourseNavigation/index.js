@@ -10,18 +10,21 @@ function CourseNavigation() {
     const { pathname } = useLocation();
 
     return (
-        <ul className="course-nav">
-            {links.map((link, index) => (
-                <li key={index} className={pathname.includes(link) ? 'course-nav-selected' : ''}>
-                    <Link to={`/Kanbas/Courses/${courseId}/${link.toLowerCase()}/screen.html`}>{link}</Link>
-                    {link === 'Discussions' || link === 'Announcements' || link === 'Pages' || link === 'Files' || link === 'Rubrics' || link === 'Outcomes' || link === 'Collaborations' || link === 'Syllabus' ? (
-                        <i className="fa-regular fa-eye-slash fa-flip-horizontal">
-                            <FaEyeSlash className="fa-2x" />
-                        </i>
-                    ) : null}
-                </li>
-            ))}
-        </ul>
+        <div>
+            <p class="cnav-small-text text-body-secondary"><i>202410_1 Fall 2023 Semester</i></p>
+            <ul className="course-nav">
+                {links.map((link, index) => (
+                    <li key={index} className={pathname.includes(link) ? 'course-nav-selected' : ''}>
+                        <Link to={`/Kanbas/Courses/${courseId}/${link.toLowerCase()}/screen.html`}>{link}</Link>
+                        {link === 'Discussions' || link === 'Announcements' || link === 'Pages' || link === 'Files' || link === 'Rubrics' || link === 'Outcomes' || link === 'Collaborations' || link === 'Syllabus' ? (
+                            <i className="fa-regular fa-eye-slash fa-flip-horizontal">
+                                <FaEyeSlash className="fa-2x" />
+                            </i>
+                        ) : null}
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 
