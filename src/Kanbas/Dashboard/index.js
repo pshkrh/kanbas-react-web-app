@@ -8,7 +8,7 @@ const Dashboard = () => {
     const course_count = courses.length;
     return (
         // Dashboard
-        <div className="col ms-5 ms-lg-3">
+        <div className="col ms-5 ms-lg-3 container ms-0 me-0 main-content">
             <div className="row">
                 <h1 className="display-6 ps-0 mt-2">Dashboard</h1>
                 <hr />
@@ -27,7 +27,6 @@ const Dashboard = () => {
                                 <div className="dropdown">
                                     <button className="btn text-white card-dropdown" type="button" id="dropdownMenuButton"
                                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {/* <i className="fa-solid fa-ellipsis-vertical fa-lg"></i> */}
                                         <FaEllipsisVertical className="fa-lg" />
                                     </button>
                                     <ul className="dropdown-menu">

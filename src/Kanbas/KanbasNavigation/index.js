@@ -32,7 +32,7 @@ const KanbasNavigation = () => {
     };
 
     return (
-        <ul className="kanbas-nav min-vh-100">
+        <ul className="kanbas-nav min-vh-100 position-fixed top-0 bottom-0 overflow-x-none overflow-y-auto">
             <li>
                 <Link to="/Kanbas/Dashboard">
                     <img src="/images/nu_logo.png" alt="NU Logo" className="nu-logo" />

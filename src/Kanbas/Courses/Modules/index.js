@@ -1,8 +1,10 @@
 import ModuleList from "./ModuleList";
+import ModulesTopRow from "./ModulesTopRow";
+
 function Modules() {
     return (
         <div>
-            <h2>Modules</h2>
+            <ModulesTopRow />
             <ModuleList />
         </div>
     );

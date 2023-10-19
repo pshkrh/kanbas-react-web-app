@@ -1,12 +1,15 @@
 import db from "../../Database";
 import { useParams } from "react-router-dom";
+import GradesTopBar from "./GradesTopBar";
+import "./index.css"
+
 function Grades() {
     const { courseId } = useParams();
     const assignments = db.assignments.filter((assignment) => assignment.course === courseId);
     const enrollments = db.enrollments.filter((enrollment) => enrollment.course === courseId);
     return (
         <div>
-            <h1>Grades</h1>
+            <GradesTopBar />
             <div className="table-responsive">
                 <table className="table">
                     <thead>
