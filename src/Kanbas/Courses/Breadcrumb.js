@@ -45,7 +45,7 @@ const Breadcrumb = ({ courseName }) => {
                         <FaGlasses className="me-2" />Student View</button>
                 </div>
             </div>
-            <hr className="ms-3 d-none d-sm-block" />
+            <hr className="ms-3 mt-0 d-none d-sm-block" />
         </div>
     )
 }
