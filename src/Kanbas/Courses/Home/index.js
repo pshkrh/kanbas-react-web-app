@@ -5,11 +5,11 @@ import CourseStatus from "./CourseStatus";
 const Home = () => {
     return (
         <div className="row">
-            <div className="col-9">
+            <div className="col">
                 <ModulesTopRow />
                 <ModuleList />
             </div>
-            <div className="col-3">
+            <div className="col-4">
                 <CourseStatus />
             </div>
 

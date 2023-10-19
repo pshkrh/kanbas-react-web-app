@@ -7,11 +7,11 @@ const CourseStatus = () => {
             <h5>Course Status</h5>
             <div className="d-flex mb-2 gap-1">
                 <button type="button" className="btn btn-secondary">
-                    <FaBan className="" />
+                    <FaBan className="me-2" />
                     Unpublish
                 </button>
                 <button type="button" className="btn btn-success" disabled>
-                    <FaCircleCheck className="" style={{ color: 'lightgreen' }} />
+                    <FaCircleCheck className="me-2" style={{ color: 'lightgreen' }} />
                     Published
                 </button>
             </div>

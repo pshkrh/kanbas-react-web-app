@@ -19,7 +19,7 @@ function Courses() {
             </div>
 
             <div className="row">
-                <div className="col-3">
+                <div className="col-2">
                     <CourseNavigation />
                 </div>
                 <div className="col">
