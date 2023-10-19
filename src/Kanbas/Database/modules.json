@@ -3,28 +3,51 @@
         "title": "Week 0 - INTRO",
         "submodules": [
             {
-                "subtitle": "LEARNING OBJECTIVES",
+                "subtitle": "Learning Objectives",
                 "items": [
-                    "Introduction to the course",
-                    "Learn what is Web Development",
-                    "Creating a development environment",
-                    "Creating a Web Application",
-                    "Getting started with the 1st assignment"
+                    {
+                        "title": "Introduction to the course"
+                    },
+                    {
+                        "title": "Learn what is Web Development"
+                    },
+                    {
+                        "title": "Creating a development environment"
+                    },
+                    {
+                        "title": "Creating a Web Application"
+                    },
+                    {
+                        "title": "Getting started with the 1st assignment"
+                    }
                 ]
             },
             {
-                "subtitle": "READING",
+                "subtitle": "Reading",
                 "items": [
-                    "Full Stack Developer - Chapter 1 - Introduction",
-                    "Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML"
+                    {
+                        "title": "Full Stack Developer - Chapter 1 - Introduction"
+                    },
+                    {
+                        "title": "Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML"
+                    }
                 ]
             },
             {
-                "subtitle": "SLIDES",
+                "subtitle": "Slides",
                 "items": [
-                    "Introduction to Web Development",
-                    "Creating an HTTP server with Node.js",
-                    "Creating a React Application"
+                    {
+                        "title": "Introduction to Web Development",
+                        "url": "/path/to/introslides"
+                    },
+                    {
+                        "title": "Creating an HTTP server with Node.js",
+                        "url": "/path/to/httpnode"
+                    },
+                    {
+                        "title": "Creating a React Application",
+                        "url": "/path/to/reactapp"
+                    }
                 ]
             }
         ]
@@ -33,26 +56,45 @@
         "title": "Week 1 - HTML",
         "submodules": [
             {
-                "subtitle": "LEARNING OBJECTIVES",
+                "subtitle": "Learning Objectives",
                 "items": [
-                    "Learn how to create user interfaces with HTML",
-                    "Keep working on Assignment 1",
-                    "Deploy the assignment to Netlify"
+                    {
+                        "title": "Learn how to create user interfaces with HTML"
+                    },
+                    {
+                        "title": "Keep working on Assignment 1"
+                    },
+                    {
+                        "title": "Deploy the assignment to Netlify"
+                    }
                 ]
             },
             {
-                "subtitle": "READING",
+                "subtitle": "Reading",
                 "items": [
-                    "Full Stack Developer - Chapter 1 - Introduction",
-                    "Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML"
+                    {
+                        "title": "Full Stack Developer - Chapter 1 - Introduction"
+                    },
+                    {
+                        "title": "Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML"
+                    }
                 ]
             },
             {
-                "subtitle": "SLIDES",
+                "subtitle": "Slides",
                 "items": [
-                    "Introduction to Web Development",
-                    "Creating an HTTP server with Node.js",
-                    "Creating a React Application"
+                    {
+                        "title": "Introduction to Web Development",
+                        "url": "/path/to/introslides"
+                    },
+                    {
+                        "title": "Creating an HTTP server with Node.js",
+                        "url": "/path/to/httpnode"
+                    },
+                    {
+                        "title": "Creating a React Application",
+                        "url": "/path/to/reactapp"
+                    }
                 ]
             }
         ]
