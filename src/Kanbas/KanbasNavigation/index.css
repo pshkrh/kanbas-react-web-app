@@ -54,7 +54,7 @@ body {
 }
 
 
-.kanbas-nav-selected>a>i.account-icon {
+.kanbas-nav-selected>a>svg.account-icon {
     color: grey;
 }
 
