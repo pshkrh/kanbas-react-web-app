@@ -1,4 +1,4 @@
-import { FaGlasses, FaBars } from 'react-icons/fa6';
+import { FaGlasses, FaBars, FaChevronDown } from 'react-icons/fa6';
 
 const Breadcrumb = ({ courseName }) => {
     return (
@@ -8,14 +8,16 @@ const Breadcrumb = ({ courseName }) => {
                 <div className="row fs-4 ps-0 pb-0 d-block d-lg-none">
                     <div className="col-12 text-center text-white bg-dark pt-4 pb-4 fs-4 align-middle">
                         <a href="/Kanbas/Courses/CourseNavigation/menu.html"
-                            className="text-decoration-none float-end fs-3"><i
-                                className="fa-solid fa-chevron-down text-white"></i></a>
+                            className="text-decoration-none float-end fs-3">
+                            <FaChevronDown className="text-white" />
+                        </a>
                         <a className="text-decoration-none text-danger fs-3"
                             href="/Kanbas/KanbasNavigation/menu.html">
-                            <i className="fa-solid fa-bars float-start mt-1 text-white"></i>
+                            <FaBars className="float-start mt-1 text-white" />
                         </a>
                         <a className="text-decoration-none" href="#">
-                            <i className="fa-solid fa-glasses float-end mt-1 me-3 text-white"></i></a>
+                            <FaGlasses className="float-end mt-1 me-3 text-white" />
+                        </a>
                         <div><a className="text-white" href="#"><u>{courseName} <br /> Home</u></a>
                         </div>
                     </div>
@@ -25,7 +27,6 @@ const Breadcrumb = ({ courseName }) => {
             {/* <!-- top bar --> */}
             <div className="d-flex flex-row align-items-center p-2 ms-2">
                 <a href="#" className="link">
-                    {/* <i className="fa-solid fa-bars menu-icon fa-lg p-2 d-none d-sm-block"></i> */}
                     <FaBars className="breadcrumb-icon fa-lg d-none d-sm-block" />
                 </a>
                 <div className="p-2 d-none d-sm-block">

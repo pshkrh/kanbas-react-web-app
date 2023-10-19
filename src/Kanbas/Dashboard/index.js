@@ -27,7 +27,7 @@ const Dashboard = () => {
                                 <div className="dropdown">
                                     <button className="btn text-white card-dropdown" type="button" id="dropdownMenuButton"
                                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <FaEllipsisVertical className="fa-lg" />
+                                        <FaEllipsisVertical />
                                     </button>
                                     <ul className="dropdown-menu">
                                         <li><a className="dropdown-item" href="#">Action</a></li>
@@ -50,7 +50,7 @@ const Dashboard = () => {
                                         </p>
                                     </Link>
                                 </div>
-                                <div><FaSquarePen className="fa-md" /></div>
+                                <div><FaSquarePen /></div>
                             </div>
                         </div>
                     ))}

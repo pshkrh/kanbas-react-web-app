@@ -11,7 +11,7 @@ function CourseNavigation() {
 
     return (
         <div>
-            <p className="cnav-small-text text-body-secondary"><i>202410_1 Fall 2023 Semester</i></p>
+            <p className="cnav-small-text text-body-secondary">202410_1 Fall 2023 Semester</p>
             <ul className="course-nav">
                 {links.map((link, index) => (
                     <li key={index} className={pathname.includes(link) ? 'course-nav-selected' : ''}>

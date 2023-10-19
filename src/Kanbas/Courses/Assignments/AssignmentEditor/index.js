@@ -3,6 +3,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import "../index.css";
 import AssignmentEditorTopBar from "./AssignmentEditorTopBar";
+import { FaPlus } from "react-icons/fa6";
 
 const AssignmentEditor = () => {
     const { assignmentId } = useParams();
@@ -246,7 +247,7 @@ const AssignmentEditor = () => {
                                 <div className="row mt-1">
                                     <div className="col">
                                         <button className="btn btn-secondary w-100 assign-add-btn">
-                                            <i className="fa-solid fa-plus me-2"></i>Add
+                                            <FaPlus className="me-1" />Add
                                         </button>
                                     </div>
                                 </div>

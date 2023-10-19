@@ -38,11 +38,6 @@ function Courses() {
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
     );
 }

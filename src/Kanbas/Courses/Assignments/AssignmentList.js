@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
+import { FaGripVertical, FaCaretDown, FaPlus, FaEllipsisVertical, FaFilePen, FaCircleCheck } from "react-icons/fa6";
 
 const AssignmentList = () => {
     const { courseId } = useParams();
@@ -10,19 +11,19 @@ const AssignmentList = () => {
         <ul className="list-group square-list-group mb-3">
             <li className="list-group-item list-group-item-secondary">
                 <div className="d-flex justify-content-start align-items-center">
-                    <i className="fa-solid fa-grip-vertical me-2"></i>
-                    <i className="fa-solid fa-caret-down me-2"></i>
+                    <FaGripVertical className="me-2" />
+                    <FaCaretDown className="me-2" />
                     <div className="assignment-title flex-grow-1">Assignments</div>
                     <small className="border border-black rounded-pill p-1 me-3">40% of Total</small>
-                    <i className="fa-solid fa-plus me-3"></i>
-                    <i className="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                    <FaPlus className="me-3" />
+                    <FaEllipsisVertical className="me-3" />
                 </div>
             </li>
             {courseAssignments.map((assignment, index) => (
                 <li className="list-group-item assignment-border" key={index}>
                     <div className="d-flex justify-content-start align-items-center">
-                        <i className="fa-solid fa-grip-vertical me-2"></i>
-                        <i className="fa-solid fa-file-pen assignment-item-icon fa-lg p-3"></i>
+                        <FaGripVertical className="me-2" />
+                        <FaFilePen className="assignment-item-icon fa-lg p-3" />
                         <div className="assignment-item flex-grow-1">
                             <div className="d-flex flex-column">
                                 <div className="assignment-item">
@@ -39,8 +40,8 @@ const AssignmentList = () => {
                                 </small>
                             </div>
                         </div>
-                        <i className="fa-solid fa-circle-check fa-lg me-3" style={{ color: 'green' }}></i>
-                        <i className="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                        <FaCircleCheck className="fa-lg me-3" style={{ color: 'green' }} />
+                        <FaEllipsisVertical className="me-3" />
                     </div>
                 </li>
             ))}

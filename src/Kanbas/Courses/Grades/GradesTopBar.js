@@ -1,15 +1,18 @@
 import "./index.css"
+import { FaFileImport, FaFileExport, FaGear, FaMagnifyingGlass } from "react-icons/fa6";
 
 const GradesTopBar = () => {
     return (
         <div>
             <div className="d-flex gap-2 align-items-center justify-content-end">
-                <button type="button" className="btn btn-secondary"><i
-                    className="fa-solid fa-file-import me-2"></i>Import</button>
+                <button type="button" className="btn btn-secondary">
+                    <FaFileImport className="me-2" />Import
+                </button>
                 <div className="dropdown">
                     <button className="btn btn-secondary dropdown-toggle" type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i className="fa-solid fa-file-export me-2"></i>Export
+                        <FaFileExport className="me-2" />
+                        Export
                     </button>
                     <ul className="dropdown-menu">
                         <li><a className="dropdown-item" href="#">Export option 1</a></li>
@@ -17,7 +20,9 @@ const GradesTopBar = () => {
                         <li><a className="dropdown-item" href="#">Export option 3</a></li>
                     </ul>
                 </div>
-                <button type="button" className="btn btn-secondary"><i className="fa-solid fa-gear"></i></button>
+                <button type="button" className="btn btn-secondary">
+                    <FaGear />
+                </button>
             </div>
 
             <div className="row mb-2">
@@ -32,15 +37,17 @@ const GradesTopBar = () => {
 
                 <div className="col-md-6">
                     <div className="input-group">
-                        <span className="input-group-text"><i
-                            className="fa-solid fa-magnifying-glass"></i></span>
+                        <span className="input-group-text">
+                            <FaMagnifyingGlass />
+                        </span>
                         <input type="text" className="form-control" placeholder="Search Students" />
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div className="input-group">
-                        <span className="input-group-text"><i
-                            className="fa-solid fa-magnifying-glass"></i></span>
+                        <span className="input-group-text">
+                            <FaMagnifyingGlass />
+                        </span>
                         <input type="text" className="form-control" placeholder="Search Assignments" />
                     </div>
                 </div>
