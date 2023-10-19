@@ -1,12 +1,15 @@
+import React from "react";
 import { FaGlasses, FaBars, FaChevronDown } from 'react-icons/fa6';
+import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ courseName }) => {
+const Breadcrumb = ({ courseId, courseName, pageNames }) => {
+    const courseBaseUrl = `/Kanbas/Courses/${courseId}`;
     return (
         <div>
             {/* <!-- Mobile Top Bar --> */}
             <div className="col-12 d-block d-sm-none">
                 <div className="row fs-4 ps-0 pb-0 d-block d-lg-none">
-                    <div className="col-12 text-center text-white bg-dark pt-4 pb-4 fs-4 align-middle">
+                    <div className="text-center text-white bg-dark pt-4 pb-4 fs-4 align-middle">
                         <a href="/Kanbas/Courses/CourseNavigation/menu.html"
                             className="text-decoration-none float-end fs-3">
                             <FaChevronDown className="text-white" />
@@ -18,7 +21,24 @@ const Breadcrumb = ({ courseName }) => {
                         <a className="text-decoration-none" href="#">
                             <FaGlasses className="float-end mt-1 me-3 text-white" />
                         </a>
-                        <div><a className="text-white" href="#"><u>{courseName} <br /> Home</u></a>
+                        <div>
+                            <Link to={courseBaseUrl} className="text-white text-decoration-none">
+                                <u>
+                                    {pageNames.length >= 2 ? (
+                                        <>
+                                            {courseName}
+                                            <br />
+                                            {pageNames[pageNames.length - 2]}
+                                        </>
+                                    ) : (
+                                        <>
+                                            {courseName}
+                                            <br />
+                                            {pageNames[0]}
+                                        </>
+                                    )}
+                                </u>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -33,16 +53,28 @@ const Breadcrumb = ({ courseName }) => {
                     <nav aria-label="breadcrumb" className='breadcrumb-separator'>
                         <ol className="breadcrumb m-0">
                             <li className="breadcrumb-item">
-                                <a className="link" href="/Kanbas/Courses/Home/screen.html">
-                                    <span className="course-name">{courseName}</span></a></li>
-                            <li className="breadcrumb-item active" aria-current="page"><span
-                                className="page-name">Home</span></li>
+                                <Link to="/Kanbas/Courses/Home/screen.html" className="link">
+                                    <span className="course-name">{courseName}</span>
+                                </Link>
+                            </li>
+                            {pageNames.map((pageName, index) => (
+                                <li key={index} className="breadcrumb-item">
+                                    {index === pageNames.length - 1 ? (
+                                        <span className="page-name">{decodeURIComponent(pageName)}</span>
+                                    ) : (
+                                        <Link to={`${courseBaseUrl}/${pageName}`} className="link">
+                                            <span className="page-name">{decodeURIComponent(pageName)}</span>
+                                        </Link>
+                                    )}
+                                </li>
+                            ))}
                         </ol>
                     </nav>
                 </div>
                 <div className="ms-auto d-none d-sm-block">
                     <button type="button" className="btn btn-secondary">
-                        <FaGlasses className="me-2" />Student View</button>
+                        <FaGlasses className="me-2" />Student View
+                    </button>
                 </div>
             </div>
             <hr className="ms-3 mt-0 d-none d-sm-block" />

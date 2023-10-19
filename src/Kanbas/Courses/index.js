@@ -1,5 +1,5 @@
 import db from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -9,13 +9,19 @@ import Grades from "./Grades";
 import Breadcrumb from "./Breadcrumb";
 import "./index.css";
 
-function Courses() {
+const Courses = () => {
     const { courseId } = useParams();
     const course = db.courses.find((course) => course._id === courseId);
+    const location = useLocation();
+    const pathSegments = location.pathname.split("/").filter(segment => segment !== "");
+
+    // Take everything after Kanbas/Courses/CourseName
+    const pageNames = pathSegments.slice(3);
+
     return (
         <div className="container ms-0 me-0 main-content">
             <div className="row">
-                <Breadcrumb courseName={course.name} />
+                <Breadcrumb courseId={course._id} courseName={course.name} pageNames={pageNames} />
             </div>
 
             <div className="row">
