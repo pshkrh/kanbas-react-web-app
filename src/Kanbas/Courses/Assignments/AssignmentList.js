@@ -23,7 +23,7 @@ const AssignmentList = () => {
                 <li className="list-group-item assignment-border" key={index}>
                     <div className="d-flex justify-content-start align-items-center">
                         <FaGripVertical className="me-2" />
-                        <FaFilePen className="assignment-item-icon fa-lg p-3" />
+                        <FaFilePen className="assignment-item-icon fa-lg me-3" />
                         <div className="assignment-item flex-grow-1">
                             <div className="d-flex flex-column">
                                 <div className="assignment-item">
