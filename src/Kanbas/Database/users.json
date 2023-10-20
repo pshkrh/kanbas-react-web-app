@@ -67,7 +67,7 @@
         "lastName": "Baggins",
         "email": "frodo@shire.com",
         "dob": "1368-09-22",
-        "role": "FACULTY"
+        "role": "STUDENT"
     },
     {
         "_id": "128",
@@ -77,7 +77,7 @@
         "lastName": "Elessar",
         "email": "aragorn@gondor.com",
         "dob": "2931-03-01",
-        "role": "FACULTY"
+        "role": "STUDENT"
     },
     {
         "_id": "129",
@@ -87,6 +87,46 @@
         "lastName": "Greenleaf",
         "email": "legolas@mirkwood.com",
         "dob": "2879-07-15",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "130",
+        "username": "wizard_gandalf",
+        "password": "youshallnotpass",
+        "firstName": "Gandalf",
+        "lastName": "the Grey",
+        "email": "gandalf@middleearth.com",
+        "dob": "2019-09-02",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "131",
+        "username": "captain_spaceman",
+        "password": "galaxyexplorer",
+        "firstName": "James",
+        "lastName": "Kirk",
+        "email": "captain@starship.com",
+        "dob": "2233-03-22",
+        "role": "FACULTY"
+    },
+    {
+        "_id": "132",
+        "username": "mystic_spellcaster",
+        "password": "hogwarts123",
+        "firstName": "Hermione",
+        "lastName": "Granger",
+        "email": "hermione@magicworld.com",
+        "dob": "1979-09-19",
+        "role": "FACULTY"
+    },
+    {
+        "_id": "133",
+        "username": "dwarven_battleaxe",
+        "password": "minesofmoria",
+        "firstName": "Thorin",
+        "lastName": "Oakenshield",
+        "email": "thorin@erebor.com",
+        "dob": "2770-10-16",
         "role": "FACULTY"
     }
 ]
