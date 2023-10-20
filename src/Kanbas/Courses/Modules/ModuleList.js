@@ -5,7 +5,7 @@ import { FaGripVertical, FaCaretDown, FaPlus, FaEllipsisVertical, FaCircleCheck,
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    const modules = db.modules.filter((module) => module.course === courseId);
     return (
         <div>
             {modules.map((module, index) => (
