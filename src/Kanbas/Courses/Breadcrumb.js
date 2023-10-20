@@ -53,7 +53,7 @@ const Breadcrumb = ({ courseId, courseName, pageNames }) => {
                     <nav aria-label="breadcrumb" className='breadcrumb-separator'>
                         <ol className="breadcrumb m-0">
                             <li className="breadcrumb-item">
-                                <Link to="/Kanbas/Courses/Home/screen.html" className="link">
+                                <Link to={`/Kanbas/Courses/${courseId}/Home`} className="link">
                                     <span className="course-name">{courseName}</span>
                                 </Link>
                             </li>
