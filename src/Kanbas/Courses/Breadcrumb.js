@@ -44,7 +44,7 @@ const Breadcrumb = ({ courseId, courseName, pageNames }) => {
                 </div>
             </div>
 
-            {/* <!-- top bar --> */}
+            {/* <!-- Top bar --> */}
             <div className="d-flex flex-row align-items-center p-2 ms-2">
                 <a href="#" className="link">
                     <FaBars className="breadcrumb-icon fa-lg d-none d-sm-block" />
