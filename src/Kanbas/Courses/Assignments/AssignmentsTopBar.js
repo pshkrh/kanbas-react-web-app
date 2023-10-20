@@ -14,7 +14,6 @@ const AssignmentsTopBar = () => {
                 <div class="dropdown">
                     <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        {/* <i class="fa-solid fa-ellipsis-vertical"></i> */}
                         <FaEllipsisVertical />
                     </button>
                     <ul class="dropdown-menu">
