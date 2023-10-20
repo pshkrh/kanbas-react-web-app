@@ -48,7 +48,7 @@ function Grades() {
                                             (grade) =>
                                                 grade.student === enrollment.user && grade.assignment === assignment._id
                                         );
-                                        const isEditable = true; // You can add conditions here to determine if it's editable
+                                        const isEditable = true;
                                         const gradeKey = `${enrollment.user}-${assignment._id}`;
                                         const value = editableGrades[gradeKey] !== undefined ? editableGrades[gradeKey] : grade?.grade || '';
 
