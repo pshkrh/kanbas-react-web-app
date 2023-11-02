@@ -1,4 +1,4 @@
-import { FaEllipsisVertical } from "react-icons/fa6";
+import { FaEllipsisVertical, FaPlus } from "react-icons/fa6";
 
 const AssignmentsTopBar = () => {
     return (
@@ -7,9 +7,11 @@ const AssignmentsTopBar = () => {
                 <div class="me-auto w-25">
                     <input type="text" class="form-control" placeholder="Search for Assignment" />
                 </div>
-                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-plus"></i>
+                <button type="button" class="btn btn-secondary">
+                    <FaPlus className="me-1" />
                     Group</button>
-                <button type="button" class="btn btn-danger"><i class="fa-solid fa-plus"></i>
+                <button type="button" class="btn btn-danger">
+                    <FaPlus className="me-1" />
                     Assignment</button>
                 <div class="dropdown">
                     <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown"

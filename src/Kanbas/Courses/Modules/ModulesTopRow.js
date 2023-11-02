@@ -1,4 +1,4 @@
-import { FaEllipsisVertical, FaCircleCheck } from 'react-icons/fa6';
+import { FaEllipsisVertical, FaCircleCheck, FaPlus } from 'react-icons/fa6';
 
 const ModulesTopRow = () => {
     return (
@@ -19,7 +19,8 @@ const ModulesTopRow = () => {
                             <li><a className="dropdown-item" href="#">Unpublish all</a></li>
                         </ul>
                     </div>
-                    <button type="button" className="btn btn-danger"><i className="fa-solid fa-plus"></i>
+                    <button type="button" className="btn btn-danger">
+                        <FaPlus className="me-1" />
                         Module</button>
                     <div className="dropdown">
                         <button className="btn btn-secondary" type="button" data-bs-toggle="dropdown"
