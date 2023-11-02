@@ -44,16 +44,16 @@ const Dashboard = () => {
                     </div>
 
                     <div className="row">
-                        <div className="course-add p-3 border rounded w-75">
+                        <div className="course-add p-3 border rounded">
                             <div className="row">
-                                <div className="col-9">
+                                <div className="col-10">
                                     <h5>Add Course</h5>
                                     <input placeholder="Enter Course Name" value={cname} className="form-control mb-2" onChange={(e) => setCName(e.target.value)} />
                                     <input placeholder="Enter Course Number" value={cnum} className="form-control mb-2" onChange={(e) => setCNum(e.target.value)} />
                                     <input className="form-control mb-2" value={csdate} type="date" onChange={(e) => setCSDate(e.target.value)} />
                                     <input className="form-control mb-2" value={cedate} type="date" onChange={(e) => setCEDate(e.target.value)} />
                                 </div>
-                                <div className="col-3">
+                                <div className="col-2">
                                     <button type="button" className="btn btn-success me-1" onClick={() => { dispatch(addCourse({ name: cname, number: cnum, startDate: csdate, endDate: cedate })) }} >
                                         Add
                                     </button>
