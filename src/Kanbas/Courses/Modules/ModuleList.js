@@ -16,34 +16,87 @@ function ModuleList() {
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
+    const initialEditingModule = {
+        title: "",
+        submodules: [{
+            subtitle: "",
+            items: [{ title: "" }]
+        }],
+    };
+
+    // New state to manage the module being edited
+    const [editingModule, setEditingModule] = useState(initialEditingModule);
+
+    // Function to handle edit button click
+    const handleEdit = (module) => {
+        setEditingModule(module);
+    };
+
+    // Function to handle update button click
+    const handleUpdate = () => {
+        dispatch(updateModule(editingModule));
+        setEditingModule(null);
+    };
+
+
     return (
         <div>
-
             <div className="module-add mb-3 p-3 border rounded">
                 <div className="row">
                     <div className="col-9">
-                        <input className="form-control mb-2" value={module.name}
-                            onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
-                            placeholder="Module Name" />
-                        <textarea className="form-control mb-2" value={module.description}
-                            onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
-                            placeholder="Module Description" />
+                        {/* Module Title Field */}
+                        <input className="form-control mb-2"
+                            value={editingModule?.title ?? ''}
+                            onChange={(e) => setEditingModule({ ...editingModule, title: e.target.value })}
+                            placeholder="Module Title" />
+
+                        {/* Handling submodules */}
+                        {editingModule && editingModule.submodules.map((submodule, index) => (
+                            <div key={index}>
+                                <input className="form-control mb-2"
+                                    value={submodule.subtitle}
+                                    onChange={(e) => {
+                                        const newEditingModule = JSON.parse(JSON.stringify(editingModule)); // Deep clone
+                                        newEditingModule.submodules[index].subtitle = e.target.value;
+                                        setEditingModule(newEditingModule);
+                                    }}
+                                    placeholder="Subtitle" />
+
+                                {/* Handling items within each submodule */}
+                                {submodule.items.map((item, itemIndex) => (
+                                    <input className="form-control mb-2"
+                                        value={item.title}
+                                        onChange={(e) => {
+                                            const newEditingModule = JSON.parse(JSON.stringify(editingModule)); // Deep clone
+                                            newEditingModule.submodules[index].items[itemIndex].title = e.target.value;
+                                            setEditingModule(newEditingModule);
+                                        }}
+                                        placeholder="Item Title" />
+                                ))}
+                            </div>
+                        ))}
                     </div>
                     <div className="col-3">
-                        <button type="button" className="btn btn-primary me-1"
-                            onClick={() => dispatch(updateModule(module))}>
+                        <button type="button" className="btn btn-primary me-1" onClick={() => {
+                            dispatch(updateModule(editingModule));
+                            setEditingModule(initialEditingModule);
+                        }}>
                             Update
                         </button>
                         <button type="button" className="btn btn-success"
-                            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                            onClick={() => {
+                                dispatch(addModule({
+                                    ...editingModule,
+                                    _id: new Date().getTime().toString(),
+                                    course: courseId
+                                }));
+                                setEditingModule(initialEditingModule); // resetting to the initial state
+                            }}>
                             Add
                         </button>
                     </div>
                 </div>
-
-
             </div>
-
 
             <div className="module-list">
                 {modules.filter((module) => module.course === courseId).map((module, index) => (
@@ -54,7 +107,7 @@ function ModuleList() {
                                 <FaPlus className="me-2" />
                                 <div className="module-title flex-grow-1">{module.title}</div>
                                 <button type="button" className="btn btn-success me-1"
-                                    onClick={() => dispatch(setModule(module))}>
+                                    onClick={() => handleEdit(module)}>
                                     Edit
                                 </button>
 
