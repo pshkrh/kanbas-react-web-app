@@ -1,5 +1,6 @@
 [
     {
+        "_id": 1,
         "title": "Week 0 - INTRO",
         "submodules": [
             {
@@ -54,6 +55,7 @@
         "course": "RS101"
     },
     {
+        "_id": 2,
         "title": "Week 1 - HTML",
         "submodules": [
             {
@@ -102,6 +104,7 @@
         "course": "RS101"
     },
     {
+        "_id": 3,
         "title": "Week 0 - INTRO",
         "submodules": [
             {
@@ -156,6 +159,7 @@
         "course": "RS102"
     },
     {
+        "_id": 4,
         "title": "Week 1 - HTML",
         "submodules": [
             {
@@ -204,6 +208,7 @@
         "course": "RS102"
     },
     {
+        "_id": 5,
         "title": "Week 0 - INTRO",
         "submodules": [
             {
@@ -258,6 +263,7 @@
         "course": "RS103"
     },
     {
+        "_id": 6,
         "title": "Week 1 - HTML",
         "submodules": [
             {
