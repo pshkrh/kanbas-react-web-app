@@ -4,7 +4,7 @@ import db from "../../Database";
 
 const initialState = {
     modules: db.modules,
-    module: { title: "New Module 123", description: "New Description", subtitle: "Learning Objectives" },
+    module: { title: '', submodules: [{ subtitle: '', items: [{ title: '' }, { title: '' }] }], course: '' }
 };
 
 
