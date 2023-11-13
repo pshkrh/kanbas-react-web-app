@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaGripVertical, FaCaretDown, FaPlus, FaEllipsisVertical, FaCircleCheck, FaLink, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { useSelector, useDispatch } from "react-redux";
 import {
     addModule,
     deleteModule,
     updateModule,
-    setModule,
     setModules,
 } from "./modulesReducer";
 import * as client from "./client";
