@@ -6,11 +6,24 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import Breadcrumb from "./Breadcrumb";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./index.css";
 
-const Courses = ({ courses }) => {
+const Courses = () => {
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const [course, setCourse] = useState({});
+    const URL = "http://localhost:4000/api/courses";
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
     const location = useLocation();
     const pathSegments = location.pathname.split("/").filter(segment => segment !== "");
 

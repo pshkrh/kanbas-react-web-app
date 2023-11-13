@@ -1,16 +1,22 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import db from "../Database";
 import './index.css';
 import { FaSquarePen, FaEllipsisVertical } from 'react-icons/fa6';
 import EditCourse from "./EditCourse";
-import { setCourse, addCourse, deleteCourse, updateCourse } from "../Courses/coursesReducer";
+import { addCourse, deleteCourse, setCourses } from "../Courses/coursesReducer";
 import { useSelector, useDispatch } from "react-redux";
+import * as client from "./client";
 
 const Dashboard = () => {
 
+    useEffect(() => {
+        client.findAllCourses()
+            .then((courses) =>
+                dispatch(setCourses(courses))
+            );
+    }, []);
+
     const courses = useSelector((state) => state.coursesReducer.courses);
-    const course = useSelector((state) => state.coursesReducer.course);
     const course_count = courses.length;
 
     const dispatch = useDispatch();
@@ -22,6 +28,18 @@ const Dashboard = () => {
     const [cnum, setCNum] = useState('');
     const [csdate, setCSDate] = useState('');
     const [cedate, setCEDate] = useState('');
+
+    const handleAddCourse = (course) => {
+        client.addCourse(course).then((course) => {
+            dispatch(addCourse(course));
+        });
+    };
+
+    const handleDeleteCourse = (courseId) => {
+        client.deleteCourse(courseId).then((status) => {
+            dispatch(deleteCourse(courseId));
+        });
+    };
 
     return (
         // Dashboard
@@ -54,7 +72,8 @@ const Dashboard = () => {
                                     <input className="form-control mb-2" value={cedate} type="date" onChange={(e) => setCEDate(e.target.value)} />
                                 </div>
                                 <div className="col-2">
-                                    <button type="button" className="btn btn-success me-1" onClick={() => { dispatch(addCourse({ name: cname, number: cnum, startDate: csdate, endDate: cedate })) }} >
+                                    <button type="button" className="btn btn-success me-1"
+                                        onClick={() => { handleAddCourse({ name: cname, number: cnum, startDate: csdate, endDate: cedate }) }} >
                                         Add
                                     </button>
 
@@ -108,7 +127,7 @@ const Dashboard = () => {
                                             </button>
                                             <button type="button" className="btn btn-danger"
                                                 onClick={() => {
-                                                    dispatch(deleteCourse(course._id));
+                                                    handleDeleteCourse(course._id);
                                                 }}>
                                                 Delete
                                             </button>
