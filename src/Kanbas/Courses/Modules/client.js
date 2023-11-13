@@ -22,7 +22,6 @@ export const createModule = async (courseId, module) => {
         `${COURSES_URL}/${courseId}/modules`,
         module
     );
-    console.log("RESP DATA", response.data);
     return response.data;
 };
 
