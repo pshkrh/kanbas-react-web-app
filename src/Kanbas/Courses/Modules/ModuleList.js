@@ -21,7 +21,6 @@ function ModuleList() {
     }, [courseId]);
 
     const modules = useSelector((state) => state.modulesReducer.modules);
-    const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
     const initialEditingModule = {
@@ -38,12 +37,6 @@ function ModuleList() {
     // Function to handle edit button click
     const handleEdit = (module) => {
         setEditingModule(module);
-    };
-
-    // Function to handle update button click
-    const handleUpdate = () => {
-        dispatch(updateModule(editingModule));
-        setEditingModule(null);
     };
 
     const handleAddModule = () => {
