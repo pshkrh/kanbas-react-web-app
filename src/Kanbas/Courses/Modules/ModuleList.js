@@ -61,9 +61,9 @@ function ModuleList() {
         });
     };
 
-    const handleUpdateModule = async () => {
-        const status = await client.updateModule(editingModule);
-        dispatch(updateModule(editingModule));
+    const handleUpdateModule = async (module) => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
         setEditingModule(initialEditingModule);
     };
 
@@ -105,7 +105,7 @@ function ModuleList() {
                         ))}
                     </div>
                     <div className="col-3">
-                        <button type="button" className="btn btn-primary me-1" onClick={handleUpdateModule}>
+                        <button type="button" className="btn btn-primary me-1" onClick={() => handleUpdateModule(editingModule)}>
                             Update
                         </button>
                         <button type="button" className="btn btn-success"
