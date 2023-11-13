@@ -18,7 +18,7 @@ const courseSlice = createSlice({
         addCourse: (state, action) => {
             state.courses = [
                 ...state.courses,
-                { ...action.payload, _id: new Date().getTime().toString() },
+                { ...action.payload },
             ];
         },
         deleteCourse: (state, action) => {
