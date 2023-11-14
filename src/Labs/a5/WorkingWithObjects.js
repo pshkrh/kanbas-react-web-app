@@ -10,14 +10,16 @@ function WorkingWithObjects() {
         completed: false,
         score: 0,
     });
-    const URL = "http://localhost:4000/a5/assignment";
+    const API_BASE = process.env.REACT_APP_LAB_API_BASE;
+    const API_URL = `${API_BASE}/a5/assignment`;
+    console.log(API_URL)
     const fetchAssignment = async () => {
-        const response = await axios.get(`${URL}`);
+        const response = await axios.get(`${API_URL}`);
         setAssignment(response.data);
     };
     const updateTitle = async () => {
         const response = await axios
-            .get(`${URL}/title/${assignment.title}`);
+            .get(`${API_URL}/title/${assignment.title}`);
         setAssignment(response.data);
     };
     useEffect(() => {
@@ -30,7 +32,7 @@ function WorkingWithObjects() {
             <h3>Working With Objects</h3>
             <h4>Modifying Properties</h4>
             <a
-                href={`${URL}/title/${assignment.title}`}
+                href={`${API_URL}/title/${assignment.title}`}
                 className="btn btn-primary me-2 float-end"
             >
                 Update Title
@@ -54,19 +56,19 @@ function WorkingWithObjects() {
             </button>
 
             <h4>Retrieving Objects</h4>
-            <a href="http://localhost:4000/a5/assignment"
+            <a href={`${API_URL}`}
                 className="btn btn-primary me-2">
                 Get Assignment
             </a>
             <h4>Retrieving Properties</h4>
             <a
-                href="http://localhost:4000/a5/assignment/title"
+                href={`${API_URL}/title`}
                 className="btn btn-primary me-2">
                 Get Title
             </a>
             <h4>Updating Score</h4>
             <a
-                href={`${URL}/score/${assignment.score}`}
+                href={`${API_URL}/score/${assignment.score}`}
                 className="btn btn-primary me-2 float-end"
             >
                 Update Score
@@ -81,7 +83,7 @@ function WorkingWithObjects() {
                 type="number" />
             <h4>Updating Completed</h4>
             <a
-                href={`${URL}/completed/${assignment.completed}`}
+                href={`${API_URL}/completed/${assignment.completed}`}
                 className="btn btn-primary me-2 float-end">
                 Update Completed
             </a>
