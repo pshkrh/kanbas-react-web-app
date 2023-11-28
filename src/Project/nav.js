@@ -11,8 +11,6 @@ function ProjectNav() {
                 className={`list-group-item ${pathname.includes("signin") ? "active" : ""}`}>Sign In</Link>
             <Link to="/project/account"
                 className={`list-group-item ${pathname.includes("account") ? "active" : ""}`}>Account</Link>
-            <Link to="/project/users"
-                className={`list-group-item ${pathname.includes("users") ? "active" : ""}`}>Users</Link>
         </div>
     );
 }
