@@ -18,6 +18,7 @@ function Project() {
                 </div>
                 <div className="col-10">
                     <Routes>
+                        <Route path="/" element={<Navigate to="/project/home" />} />
                         <Route path="/home" element={<ProjectHome />} />
                         <Route path="/signin" element={<Signin />} />
                         <Route path="/signup" element={<Signup />} />
